@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router"
-import ForgotPasswordPage from "./pages/forgotPasswordPage"
 import LoginPage from "./pages/LoginPage"
 import CreateUserPage from "./pages/CreateUserPage"
 import ResetPage from "./pages/ResetPage"
+import ForgotPasswordPage from "./pages/ForgotPasswordPage"
 
 function App() {
   return (
