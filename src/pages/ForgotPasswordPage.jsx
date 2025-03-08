@@ -8,9 +8,9 @@ const [email,setEmail] =useState("")
   const API_URL=import.meta.env.REACT_APP_BACKEND_URL
   const FetchFunc = async (page,data) => {
     try {
-      const response = await axios.post(`${API_URL}/${page}`,data)
+      await axios.post(`${API_URL}/${page}`,data)
   
-      console.log("Link send Your Email Successful:", response);
+      console.log("Link send Your Email Successful");
       toast.success("Link send Your Email Successful!")
       // sessionStorage.setItem("token", response.data.token); // Save token
     } catch (error) {
@@ -21,7 +21,6 @@ const [email,setEmail] =useState("")
 
   const SubmitHandle =async (e)=>{
     await e.preventDefault()
-    console.log(e)
     await FetchFunc("forgot-password",{email})
 
   }
