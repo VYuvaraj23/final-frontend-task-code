@@ -13,7 +13,7 @@ function CreateUserPage() {
     try {
       await axios.post(`${API_URL}/${page}`,data)
   
-      console.log("Create Successful:");
+      console.log("Create Successful");
       toast.success("Create successful!")
     } catch (error) {
       console.error("Create Error:", error.response?.data?.message || error.message);

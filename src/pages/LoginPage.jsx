@@ -13,7 +13,7 @@ function LoginPage() {
     try {
       await axios.post(`${API_URL}/${page}`,data)
   
-      console.log("Login Successful:");
+      console.log("Login Successful");
       toast.success("Login successful!")
       
     } catch (error) {
