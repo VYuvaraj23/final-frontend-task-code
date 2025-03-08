@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/reset-password/:token"
+to = "/reset-password/:token"
+status= 200
