@@ -8,7 +8,7 @@ function LoginPage() {
   const [email,setEmail]=useState("")
   const [password, setPassword] = useState("")
   
-  const API_URL=import.meta.env.REACT_APP_BACKEND_URL
+  const API_URL = import.meta.env.REACT_APP_BACKEND_URL
   const FetchFunc = async (page,data) => {
     try {
       await axios.post(`${API_URL}/${page}`,data)
