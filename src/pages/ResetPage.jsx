@@ -12,14 +12,14 @@ function ResetPage() {
   const API_URL=import.meta.env.REACT_APP_BACKEND_URL
   const FetchFunc = async (page,{password},token) => {
     try {
-      const response = await axios.put(`${API_URL}/${page}`, {password},{
+    await axios.put(`${API_URL}/${page}`, {password},{
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`
         },
       })
   
-      console.log("Password successfully changed!", response);
+      console.log("Password successfully changed!");
       toast.success("Password successfully changed!")
       
     } catch (error) {

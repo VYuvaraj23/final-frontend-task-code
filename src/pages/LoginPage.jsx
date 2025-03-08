@@ -11,9 +11,9 @@ function LoginPage() {
   const API_URL=import.meta.env.REACT_APP_BACKEND_URL
   const FetchFunc = async (page,data) => {
     try {
-      const response = await axios.post(`${API_URL}/${page}`,data)
+      await axios.post(`${API_URL}/${page}`,data)
   
-      console.log("Login Successful:", response);
+      console.log("Login Successful:");
       toast.success("Login successful!")
       
     } catch (error) {

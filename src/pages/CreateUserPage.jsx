@@ -11,9 +11,9 @@ function CreateUserPage() {
   const API_URL=import.meta.env.REACT_APP_BACKEND_URL
   const FetchFunc = async (page,data) => {
     try {
-      const response = await axios.post(`${API_URL}/${page}`,data)
+      await axios.post(`${API_URL}/${page}`,data)
   
-      console.log("Create Successful:", response);
+      console.log("Create Successful:");
       toast.success("Create successful!")
     } catch (error) {
       console.error("Create Error:", error.response?.data?.message || error.message);
@@ -28,7 +28,6 @@ function CreateUserPage() {
   const SubmitHandle =async (e)=>{
     await e.preventDefault()
     const data ={name,email,password}
-    console.log(data)
     await FetchFunc("signup",data)
     
    
