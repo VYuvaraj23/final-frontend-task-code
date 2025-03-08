@@ -34,7 +34,7 @@ const [email,setEmail] =useState("")
       </form>
       <div>
         <p>Register to <Link to="/signup"><span>click here</span></Link></p>
-        <p>Login<Link to="/forgot-password"><span>click here</span></Link></p>
+        <p>Login <Link to="/"><span>click here</span></Link></p>
       </div>
     </>
   )
