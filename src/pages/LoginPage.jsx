@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import toast from "react-hot-toast";
 import axios from "axios";
 
@@ -8,20 +8,22 @@ function LoginPage() {
   const [password, setPassword] = useState("");
 
   const API_URL = import.meta.env.REACT_APP_BACKEND_URL;
-  const navigate = useNavigate();
   const FetchFunc = async (page, data) => {
     try {
       await axios.post(`${API_URL}/${page}`, data);
 
       console.log("Login Successful");
       toast.success("Login successful!");
-      navigate("/");
+      
     } catch (error) {
       console.error(
         "Login Error:",
         error.response?.data?.message || error.message
       );
       toast.error(error.response?.data?.message || error.message);
+    }finally {
+      setEmail("")
+      setPassword("")
     }
   };
 
